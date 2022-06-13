@@ -1,0 +1,192 @@
+<html>
+<head>
+    <title>Ecosistema</title>
+    <link rel="stylesheet" href="estilo2.css">
+    <style>
+li{color:rgb(255, 255, 255);}
+</style>
+</head>
+<body>
+
+
+    <body onload="doWave(0)" style="font-family: Verdana"> 
+        <p align="center"><b>
+        <script language="JavaScript">
+        
+        //put your text here
+        var theText = "Ecosistema";
+        
+        function nextSize(i,incMethod,textLength)
+        {   
+        if (incMethod == 1) return (72*Math.abs( Math.sin(i/(textLength/3.14))) );
+        if (incMethod == 2) return (255*Math.abs( Math.cos(i/(textLength/3.14))));
+        }
+        
+        function sizeCycle(text,method,dis)
+        {
+            output = "";
+            for (i = 0; i < text.length; i++)
+            {
+                size = parseInt(nextSize(i +dis,method,text.length));
+                output += "<font style='font-size: "+ size +"pt'>" +text.substring(i,i+1)+ "</font>";
+            }
+            theDiv.innerHTML = output;
+        }
+        
+        function doWave(n) 
+        {   
+            sizeCycle(theText,1,n);
+            if (n > theText.length) {n=0}
+            setTimeout("doWave(" + (n+1) + ")", 100);
+        }
+        </script>
+        </b></p>
+        <div ID="theDiv" align="center">
+        
+        </div>
+        
+        
+        </body>
+<nav>
+	<a href="#es">¿Qué es?</a>
+	<a href="#Componentes">Componentes</a>
+	<a href="#t">Tipos</a>
+	<div class="animation start-home"></div>
+</nav>
+    <a name="es"></a>
+<center><font color="white">
+    <p align="center"><font face="Verdana"><b>Efecto de ola en texto</b></font></p>
+    <script language="JavaScript1.2">
+    
+    /*
+    Nudging text by Matthias (info@freejavascripts.f2s.com)
+    Modified by Dynamic Drive to function in NS6
+    For this script and more, visit http://www.dynamicdrive.com
+    */
+    
+    //configure message
+    message="¿Qué es un ecosistema?"
+    //animate text in NS6? (0 will turn it off)
+    ns6switch=1
+    
+    var ns6=document.getElementById&&!document.all
+    mes=new Array();
+    mes[0]=-1;
+    mes[1]=-4;
+    mes[2]=-7;mes[3]=-10;
+    mes[4]=-7;
+    mes[5]=-4;
+    mes[6]=-1;
+    num=0;
+    num2=0;
+    txt="";
+    function jump0(){
+    if (ns6&&!ns6switch){
+    jump.innerHTML=message
+    return
+    }
+    if(message.length > 6){
+    for(i=0; i != message.length;i++){
+    txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+    jump.innerHTML=txt;
+    txt="";
+    jump1a()
+    }
+    else{
+    alert("Your message is to short")
+    }
+    }
+    
+    function jump1a(){
+    nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+    nfinal.style.left=-num2;
+    if(num2 != 9){
+    num2=num2+3;
+    setTimeout("jump1a()",50)
+    }
+    else{
+    jump1b()
+    }
+    }
+    
+    function jump1b(){
+    nfinal.style.left=-num2;
+    if(num2 != 0){num2=num2-3;
+    setTimeout("jump1b()",50)
+    }
+    else{
+    jump2()
+    }
+    }
+    
+    function jump2(){
+    txt="";
+    for(i=0;i != message.length;i++){
+    if(i+num > -1 && i+num < 7){
+    txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+    }
+    else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+    }
+    jump.innerHTML=txt;
+    txt="";
+    if(num != (-message.length)){
+    num--;
+    setTimeout("jump2()",50)}
+    else{num=0;
+    setTimeout("jump0()",50)}}
+    </script>
+    </head>
+    <body>
+    
+    <h2><div id="jumpx" style="color:rgb(255, 255, 255)"></div></h2>
+    <script>
+    if (document.all||document.getElementById){
+    jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+    jump0()
+    }
+    else
+    document.write(message)
+    </script></center></font>
+    <p>
+    <h3><font color="white">En biología, un ecosistema es un sistema que está formado por un conjunto de organismos, el medio ambiente físico en el que viven (hábitat) y las relaciones tanto bióticas como abióticas que se establecen entre ellos. Las especies de seres vivos que habitan un determinado ecosistema interactúan entre sí y con el medio, determinando el flujo de energía y de materia que ocurre en ese ambiente.
+
+        Existe una gran diversidad de ecosistemas en el planeta. Todos están formados por factores bióticos (seres vivos) y factores abióticos (elementos no vivos, como el suelo o el aire). Existen además, distintos tipos de ecosistemas: hay marinos, terrestres, microbianos y artificiales, entre otros ejemplos.
+        
+        Un ejemplo de las relaciones que tienen lugar entre los seres vivos de un ecosistema son las relaciones alimentarias. Las cadenas tróficas o alimenticias son representaciones sencillas de las relaciones alimentarias que existen entre las especies que forman parte de un ecosistema determinado. Por lo general, en los ecosistemas las cadenas tróficas se interrelacionan formando redes tróficas.
+        
+        Se dice que hay una relación trófica entre dos organismos cuando uno de ellos es consumido por el otro. A su vez, el organismo consumidor puede ser el alimento de otro que forma parte del mismo ecosistema. Así, se forma una conexión entre varios eslabones y se constituye una cadena trófica. Cada uno de los eslabones de una cadena representa un organismo que “come a otro” o “es comido por otro”.
+        
+        Dentro de las cadenas alimentarias existen distintos niveles tróficos, que se basan en la posición que ocupa un organismo en el flujo de materia y energía. Dicho de otra forma, el nivel trófico agrupa a todas las especies que comparten el origen de su alimento dentro del ecosistema.</font></h3>
+<center><img src="ecosistema.jpg" width="1000" height="200"/></center>
+<p>
+    <hr size="10px" color="black" />
+        <a name="Componentes"></a>
+        <h1><font color="white">Componentes de un ecosistema</font></h1>
+    <p>
+    <h3><font color="white">Un ecosistema está integrado por dos tipos de elementos o factores:</font></h3>
+    <p>
+        <ul>
+            <li>Elementos bióticos. Son aquellos elementos de un ecosistema que poseen vida, es decir, todos los seres vivos que lo habitan Por ejemplo: la flora y la fauna.</li>
+            <li>Elementos abióticos. Son aquellos factores sin vida que forman parte de un ecosistema. Por ejemplo: condiciones climáticas, relieve, variación del pH, presencia de luz solar.</li>
+            </ul>
+            <h3><font color="white">Es muy importante tener en cuenta que las relaciones que se establecen entre los elementos bióticos y abióticos también son consideradas un elemento más que forma un ecosistema determinado.</font></h3>
+            <center><img src="ecosistema2.jpg" width="300" height="300"/></center>
+            <p>
+            <hr size="10px" color="black" />
+            <p>
+                
+            <h1><font color="white">Tipos de ecosistema</font></h1><a name="t"></a>
+            <center><img src="ecosistema3.jpg"></center>
+    <p>
+    <h2><font color="white">Ecosistemas acuáticos:</h2> <p> <h3>Se caracterizan por la presencia de agua como componente principal y son el tipo de ecosistema más abundante: constituyen casi el 75 % de todos los ecosistemas conocidos. En este grupo se incluyen los ecosistemas de los océanos y los de las aguas continentales dulces o saladas, como ríos, lagos y lagunas.</font></h3>
+    <p>
+        <h2><font color="white">Ecosistemas terrestres:</h2> <p><h3>Tienen lugar sobre la corteza terrestre y fuera del agua en diversos tipos de relieve: montañas, planicies, valles, desiertos. Existen entre ellos diferencias importantes de temperatura, concentración de oxígeno y clima, por lo que la biodiversidad de estos ecosistemas es grande y variada. Algunos ejemplos de este tipo de ecosistemas son los bosques, los matorrales, la estepa y los desiertos.</font></h3>
+            <p>
+                <h2><font color="white">Ecosistemas mixtos:</h2> <p><h3>Son ecosistemas que se ubican en zonas de “intersección” de distintos tipos de terrenos, por ejemplo, en los que se combinan el medio acuático y el terrestre. Los ecosistemas mixtos también llamados híbridos, comparten características tanto de ecosistemas terrestres como de los acuáticos, y se los considera zonas de transición entre ambos tipos de ecosistemas mencionados. Los seres vivos que habitan en este tipo de ecosistemas (como los anfibios) pasan la mayor parte del tiempo en uno de los dos ecosistemas pero requieren del otro para reposar, alimentarse o procrear. Algunos ejemplos de este tipo de ecosistemas son los manglares, los esteros y las costas.</font></h3>
+                    <p>
+                        <h2><font color="white">Ecosistemas microbianos:</h2> <p><h3>Son ecosistemas formados por organismos microscópicos que habitan en prácticamente todos los ambientes, tanto acuáticos como terrestres, e incluso dentro de organismos mayores, como es el caso de la flora microbiana intestinal.</font></h3>
+                            <p>
+                                <h2><font color="white">Ecosistemas artificiales:</h2> <p><h3>Son aquellos ecosistemas creados y/o intervenidos por el ser humano, por lo cual también se los conoce como ecosistemas antrópicos. Algunos ejemplos de estos ecosistemas, que son cada vez más comunes en nuestro planeta, son los ecosistemas urbanos, los embalses y los ecosistemas agrícolas.</font></h3>
+                        
+        </body>
+</html>
